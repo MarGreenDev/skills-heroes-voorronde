@@ -11,3 +11,7 @@
 .hero-section {
     background-image: url(../../public/images/hero.jpg);
 }
+
+.navigation {
+    justify-content: space-between;
+}

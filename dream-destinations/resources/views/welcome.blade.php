@@ -5,21 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dream Destinations</title>
+    <link rel="favicon" href="../public/images/logo-dream-destinations.jpg">
 
     @vite (['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body>
 
-    <header class="flex items-center bg-orange-400">
+    <header class="flex items-center justify-center bg-orange-400">
         <img src="{{ asset('images/logo-dream-destinations.png') }}" alt=""
             class="w-40">
-        <!-- justify between wilt niet werken -->
-        <ul class="flex text-white justify-center">
+    </header>
+    <nav class="bg-orange-300 p-3">
+        <ul class="flex text-orange-700 justify-evenly">
             <a href="#" class="cursor-pointer">
                 <li>Home</li>
             </a>
-            <a href="#" class="cursor-pointer">
+            <a href="#bestemmingen" class="cursor-pointer">
                 <li>Bestemmingen</li>
             </a>
             <a href="#" class="cursor-pointer">
@@ -32,26 +34,27 @@
                 <li>Contact</li>
             </a>
         </ul>
-        </nav>
-    </header>
+    </nav>
 
     <div class="hero-section object-fill text-white flex flex-col text-center p-15 gap-20 mb-5">
         <h1 class="text-5xl">Ontdek de wereld met DreamDestinations</h1>
         <p>De mooiste bestemmingen wereldwijd. Voor iedere reiziger de perfecte reis.</p>
-        <button
+        <a href="#bestemmingen"
             id="destinations-button" class="cursor-pointer bg-orange-600/50">
             Bekijk bestemmingen
-        </button>
+        </a>
     </div>
 
-    <main class="grid grid-cols-1 md:grid-cols-3 gap-10 p-3">
+    <main class="grid grid-cols-1 md:grid-cols-3 gap-10 p-3" id="bestemmingen">
 
         @foreach ($destinations as $destination)
-        <div class="text-center">
+        <div class="text-center border-orange-400 border-3 shadow-orange-400/40 shadow-md hover:shadow-orange-400/70 hover:shadow-xl">
             <img src="{{ asset($destination->image) }}" alt=""
                 class="">
             <h2>{{ $destination->city }}</h2>
             <p>{{ $destination->country }}</p>
+
+            <p>Aantal boekingen: {{ $destination->number_of_bookings }}</p>
         </div>
         @endforeach
 
@@ -61,7 +64,7 @@
         <div class="bg-linear-to-t from-orange-300 to-orange-600 bg-clip-text text-transparent text-4xl font-bold ">
             <h2>Statistieken</h2>
         </div>
-        <div class="flex flex-col md:flex-row text-xl font-semibold">
+        <div class="flex flex-col md:flex-row text-xl font-semibold gap-3">
             <p id="reizigers">4000+ reizigers</p>
             <p>120 bestemmingen</p>
             <p>98% tevreden klanten</p>
