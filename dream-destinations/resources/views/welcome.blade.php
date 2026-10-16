@@ -11,47 +11,66 @@
 
 <body>
 
-    <header class="flex items-end bg-orange-400">
+    <header class="flex items-center bg-orange-400">
         <img src="{{ asset('images/logo-dream-destinations.png') }}" alt=""
             class="w-40">
-        <nav class="flex justify-between">
-            <ul class="flex text-white">
-                <a href="#" class="cursor-pointer">
-                    <li>Home</li>
-                </a>
-                <a href="#" class="cursor-pointer">
-                    <li>Bestemmingen</li>
-                </a>
-                <a href="#" class="cursor-pointer">
-                    <li>Aanbiedingen</li>
-                </a>
-                <a href="#" class="cursor-pointer">
-                    <li>Over ons</li>
-                </a>
-                <a href="#" class="cursor-pointer">
-                    <li>Contact</li>
-                </a>
-            </ul>
+        <!-- justify between wilt niet werken -->
+        <ul class="flex text-white justify-center">
+            <a href="#" class="cursor-pointer">
+                <li>Home</li>
+            </a>
+            <a href="#" class="cursor-pointer">
+                <li>Bestemmingen</li>
+            </a>
+            <a href="#" class="cursor-pointer">
+                <li>Aanbiedingen</li>
+            </a>
+            <a href="#" class="cursor-pointer">
+                <li>Over ons</li>
+            </a>
+            <a href="#" class="cursor-pointer">
+                <li>Contact</li>
+            </a>
+        </ul>
         </nav>
     </header>
 
-    <div class="hero-section object-fill text-white flex flex-col justify-center text-center p-15 gap-20">
+    <div class="hero-section object-fill text-white flex flex-col text-center p-15 gap-20 mb-5">
         <h1 class="text-5xl">Ontdek de wereld met DreamDestinations</h1>
         <p>De mooiste bestemmingen wereldwijd. Voor iedere reiziger de perfecte reis.</p>
         <button
-            id="destinations-button" class="cursor-pointer">
+            id="destinations-button" class="cursor-pointer bg-orange-600/50">
             Bekijk bestemmingen
         </button>
     </div>
 
-    <main class="grid grid-cols-1 md:grid-cols-3">
+    <main class="grid grid-cols-1 md:grid-cols-3 gap-10 p-3">
 
         @foreach ($destinations as $destination)
-        <h2>{{ $destination->name ?? 'not found'  }}</h2>
+        <div class="text-center">
+            <img src="{{ asset($destination->image) }}" alt=""
+                class="">
+            <h2>{{ $destination->city }}</h2>
+            <p>{{ $destination->country }}</p>
+        </div>
         @endforeach
 
     </main>
 
+    <div class="statistieken flex flex-col items-center p-15">
+        <div class="bg-linear-to-t from-orange-300 to-orange-600 bg-clip-text text-transparent text-4xl font-bold ">
+            <h2>Statistieken</h2>
+        </div>
+        <div class="flex flex-col md:flex-row text-xl font-semibold">
+            <p id="reizigers">4000+ reizigers</p>
+            <p>120 bestemmingen</p>
+            <p>98% tevreden klanten</p>
+        </div>
+    </div>
+
+    <footer class="bg-orange-500 text-center text-white">
+        DreamDestinations © 2026
+    </footer>
 </body>
 
 </html>
