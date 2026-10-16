@@ -6,7 +6,7 @@
         <a href="#bestemmingen" class="cursor-pointer">
             <li>Bestemmingen</li>
         </a>
-        <a href="#" class="cursor-pointer">
+        <a href="https://github.com/MarGreenDev/skills-heroes-voorronde" class="cursor-pointer">
             <li>Aanbiedingen</li>
         </a>
         <a href="https://www.softwire-social.com" class="cursor-pointer">
