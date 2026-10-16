@@ -6,6 +6,8 @@ Ik heb wat moeite gehad met het importen van de database en tailwind wilde niet 
 
 De website is bijna geheel responsive, behalve de nav bar.
 
+Bijna alle knoppen in de nav bar lijden ergens naartoe.
+
 ## Opstarten applicatie
 
 Voor het opstarten van de applicatie is laravel sail nodig.
