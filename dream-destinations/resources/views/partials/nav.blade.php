@@ -1,6 +1,6 @@
 <nav class="bg-orange-300 p-3">
     <ul class="flex text-orange-700 justify-evenly">
-        <a href="#" class="cursor-pointer">
+        <a href="/" class="cursor-pointer">
             <li>Home</li>
         </a>
         <a href="#bestemmingen" class="cursor-pointer">
