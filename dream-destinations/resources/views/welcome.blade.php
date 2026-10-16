@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+    <!-- filters/search? -->
     <header class="flex items-center justify-center bg-orange-400">
         <img src="{{ asset('images/logo-dream-destinations.png') }}" alt=""
             class="w-40">
@@ -30,7 +30,7 @@
             <a href="https://www.softwire-social.com" class="cursor-pointer">
                 <li>Over ons</li>
             </a>
-            <a href="#" class="cursor-pointer">
+            <a href="mailto:contact@dreamdestinations.com" class="cursor-pointer" target="_blank">
                 <li>Contact</li>
             </a>
         </ul>

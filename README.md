@@ -4,7 +4,7 @@ Ik heb gekozen om met Laravel en tailwind te werken omdat ik daar het meeste mee
 
 Ik heb wat moeite gehad met het importen van de database en tailwind wilde niet meewerken op sommige plekken
 
-De website is voor het grootste deel responsive, behalve de nav omdat tailwind niet wilde meewerken
+De website is bijna geheel responsive, behalve de nav bar.
 
 ## Opstarten applicatie
 
