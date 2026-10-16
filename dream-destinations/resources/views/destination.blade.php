@@ -16,25 +16,7 @@
         <img src="{{ asset('images/logo-dream-destinations.png') }}" alt=""
             class="w-40">
     </header>
-    <nav class="bg-orange-300 p-3">
-        <ul class="flex text-orange-700 justify-evenly">
-            <a href="/" class="cursor-pointer">
-                <li>Home</li>
-            </a>
-            <a href="#bestemmingen" class="cursor-pointer">
-                <li>Bestemmingen</li>
-            </a>
-            <a href="#" class="cursor-pointer">
-                <li>Aanbiedingen</li>
-            </a>
-            <a href="https://www.softwire-social.com" class="cursor-pointer">
-                <li>Over ons</li>
-            </a>
-            <a href="#" class="cursor-pointer">
-                <li>Contact</li>
-            </a>
-        </ul>
-    </nav>
+    @include('partials.nav')
 
     <div class="hero-section object-fill text-white flex flex-col text-center p-15 gap-20 mb-5">
         <div>
