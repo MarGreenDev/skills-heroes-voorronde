@@ -52,14 +52,19 @@
     <main class="grid grid-cols-1 md:grid-cols-3 gap-10 p-3" id="bestemmingen">
 
         @foreach ($destinations as $destination)
-        <div class="text-center border-orange-400 border-3 shadow-orange-400/40 shadow-md hover:shadow-orange-400/70 hover:shadow-xl">
-            <img src="{{ asset($destination->image) }}" alt=""
-                class="">
-            <h2>{{ $destination->city }}</h2>
-            <p>{{ $destination->country }}</p>
+        <a href="{{ route('destination',$destination) }}">
+            <div class="text-center border-orange-400 border-3 shadow-orange-400/40 shadow-md hover:shadow-orange-400/70 hover:shadow-xl">
+                <img src="{{ asset($destination->image) }}" alt=""
+                    class="">
+                <div class="flex flex-col py-2">
+                    <h3 class="text-orange-600 text-lg font-semibold">{{ $destination->city }}</h3>
 
-            <p>Aantal boekingen: {{ $destination->number_of_bookings }}</p>
-        </div>
+                    <p class="text-sm">{{ $destination->country }}</p>
+
+                </div>
+                <p>Aantal boekingen: {{ $destination->number_of_bookings }}</p>
+            </div>
+        </a>
         @endforeach
 
     </main>
