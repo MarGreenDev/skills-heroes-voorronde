@@ -27,7 +27,7 @@
             <a href="#" class="cursor-pointer">
                 <li>Aanbiedingen</li>
             </a>
-            <a href="#" class="cursor-pointer">
+            <a href="https://www.softwire-social.com" class="cursor-pointer">
                 <li>Over ons</li>
             </a>
             <a href="#" class="cursor-pointer">
@@ -37,12 +37,16 @@
     </nav>
 
     <div class="hero-section object-fill text-white flex flex-col text-center p-15 gap-20 mb-5">
-        <h1 class="text-5xl">Ontdek de wereld met DreamDestinations</h1>
-        <p>De mooiste bestemmingen wereldwijd. Voor iedere reiziger de perfecte reis.</p>
-        <a href="#bestemmingen"
-            id="destinations-button" class="cursor-pointer bg-orange-600/50">
-            Bekijk bestemmingen
-        </a>
+        <div>
+            <h1 class="text-5xl bg-linear-to-t from-orange-300 to-orange-600 bg-clip-text text-transparent font-black">Ontdek de wereld met DreamDestinations</h1>
+            <p class="text-2xl">De mooiste bestemmingen wereldwijd. Voor iedere reiziger de perfecte reis.</p>
+        </div>
+        <div>
+            <a href="#bestemmingen"
+                id="destinations-button" class="cursor-pointer bg-orange-600/50 hover:bg-orange-600 p-4 font-semibold">
+                Bekijk bestemmingen
+            </a>
+        </div>
     </div>
 
     <main class="grid grid-cols-1 md:grid-cols-3 gap-10 p-3" id="bestemmingen">
